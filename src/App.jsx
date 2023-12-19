@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./App.css";
 
 const cardsArray = [
   "3175",
@@ -53,18 +52,21 @@ function App() {
 
   if (isLoading) {
     return (
-      <>
-        <p className="loadingP">Loading...</p>
-      </>
+      <div className="contentLoading">
+        <p>Loading...</p>
+      </div>
     );
   } else
     return (
-      <>
-        <div className="cards">{fetchedCardsArray}</div>
-      </>
+      <div className="contentPlayScreen">
+        <div className="gameTitle">
+          <p>Memory Game</p>
+          <p>Movie Posters Edition</p>
+        </div>
+        <button className="playButton">Play!</button>
+        {/* <div className="cards">{fetchedCardsArray}</div> */}
+      </div>
     );
 }
 
 export default App;
-
-// need to run function in the bginning of the program to convert each array item from cards array into an actual card (just need it to be an image.cards)
