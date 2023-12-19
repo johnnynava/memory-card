@@ -1,8 +1,5 @@
-# React + Vite
+# Memory Card Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I chose 12 movies to make the selection for and I retrieve the images and information using tmdb's api. I could have programmed this to choose ANY movie instead of 12 preselected ones but the problem with this is that tmdb also contains adult movies listed under the same database (I don't want this website to potentially display anything inaproppriate) and there's some very niche movies with low quality posters that I didn't want to be featured in my page.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Making the game up to 12 posters is enough for me to learn about the concepts that are intended to be learned from this project.
