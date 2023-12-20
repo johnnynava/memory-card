@@ -1,6 +1,4 @@
 problems:
-//need you won page in case the user chooses 12 correct posters in a row (include a restart button to start process from zero)
-//need you lost page in case the user loses (include restart button to start process from zero)
 //create restart button that restarts game from zero (keep highScore and reset currentScore too)
 
 //after everything functions:
