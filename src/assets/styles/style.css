@@ -9,6 +9,7 @@ body{
   height: 100vh;
   width: 100vw;
   background-image: url("../img/background.jpeg");
+  background-size: fill;
 }
 
 
@@ -50,7 +51,30 @@ body{
 .gameTitle > p:nth-child(2){
   font-size: 3rem;
   margin-top: 0px;
+}
 
+.gameTitlePlaying {
+  font-family: "Wonderbar";
+  color: white;
+  background-color: black;
+  border: 3px solid goldenrod;
+  border-radius: 15px;
+  text-align: center;
+  padding: 10px;
+  margin-top: 15px;
+  align-self: center;
+}
+
+.gameTitlePlaying > p:nth-child(1){
+  font-size: 2rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.gameTitlePlaying > p:nth-child(2){
+  font-size: 1rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .playButton{
@@ -77,17 +101,46 @@ body{
   text-align: center;
 }
 
+.contentPlaying {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+
+.scores {
+  font-family: "Wonderbar";
+  color: white;
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.scores > span,
+.scores > p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-self: center;
+}
+
+.score {
+  color: goldenrod;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 30px;
+  gap: 4vh;
+  padding: 50px;
+  justify-self: center;
 }
 
 .card {
-  /* ratio: 1.5 */
-  width: 200px;
-  height: 300px;
+  width: 175px;
+  height: 262.5px;
   padding: 0px;
   box-sizing: border-box;
   border-radius: 15px;
@@ -95,5 +148,5 @@ body{
 
 .card:hover {
   cursor: pointer;
-  border: 3px solid green
+  border: 3px solid green;
 }
