@@ -1,5 +1,4 @@
 problems:
-//pass a isNewGame boolean prop to the card to determine whether it should start a new game or not
 //need you won page in case the user chooses 12 correct posters in a row (include a restart button to start process from zero)
 //need you lost page in case the user loses (include restart button to start process from zero)
 //create restart button that restarts game from zero (keep highScore and reset currentScore too)
@@ -7,10 +6,11 @@ problems:
 //after everything functions:
 //make it look pretty on mobile
 //make effect of the cards to transition to back image and then display the new values
-//implement env variable to hide api key
+
 //implement function to display random movies instead of preselected ones? this will imply using the following: https://developer.themoviedb.org/reference/movie-latest-id
-//and also query for another random number in case the response is not a 200 (there are some cases in which you could hit a deleted id)
-//"hide" api key
+//and also fetching the cards with a random array of numbers everytime a user clicks on restart or refreshes the page;
+//this can be done with a isNewGame boolean prop to the card to determine whether it should start a new game (and fetch new cards with a random array of numbers) or not
+//and also query for another random number in case the response is not a 200 (there are some cases in which you could hit a deleted id) - this can be verified by fetchedItems.status === 200 (response of fetch)
 //what cleanup function should i add for the fetchedCardsArray?
 
 //NOTES:

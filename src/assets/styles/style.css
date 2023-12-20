@@ -19,7 +19,26 @@ body{
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   display: grid;
+  grid-template-rows: 1fr 50px;
   align-items: center;
+}
+
+.footer {
+font-family: "Wonderbar";
+text-align: center;
+color: white;
+font-size: 1.4rem;
+margin-bottom: 30px;
+}
+
+.footer > a {
+  color: white;
+  font-style: none;
+  text-decoration: none;
+}
+
+.footer > a:hover {
+  color: goldenrod;
 }
 
 .contentPlayScreen{
@@ -40,6 +59,52 @@ body{
   text-align: center;
   justify-content: center;
   padding: 20px;
+}
+
+.loseScreen,
+.winScreen{
+  padding: 30px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameLost,
+.gameWon{
+  font-family: "Wonderbar";
+  border-radius: 15px;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 7rem
+}
+
+.gameLost{
+  color: purple;
+}
+
+.gameWon{
+  color: green
+}
+
+.restartButton{
+  font-family: "Wonderbar";
+  font-size: 3rem;
+  color: white;
+  background-color: black;
+  border: 3px solid goldenrod;
+  border-radius: 15px;
+  padding:  10px 30px;
+  justify-self: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.restartButton:hover{
+  cursor:pointer;
+  color: goldenrod;
 }
 
 .gameTitle > p:nth-child(1){

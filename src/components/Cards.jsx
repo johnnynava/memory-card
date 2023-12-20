@@ -21,6 +21,9 @@ const checkForDuplicates = (array) => {
   return new Set(array).size !== array.length;
 };
 
+//restart game use useState for isNewGame?
+const handlePlayAgain = () => {};
+
 export default function Cards() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedCards, setSelectedCards] = useState([]);
@@ -48,7 +51,9 @@ export default function Cards() {
         fetchedCardsArray = await Promise.all(
           cardsArray.map(async (card, index) => {
             const fetchedItems = await fetch(
-              `https://api.themoviedb.org/3/movie/${card}/images?language=en&api_key=0f799d1a5d6272d00905b33706caf83b`,
+              `https://api.themoviedb.org/3/movie/${card}/images?language=en&api_key=${
+                import.meta.env.VITE_TMDB_API_KEY
+              }`,
             );
             const parsedResponse = await fetchedItems.json();
             return (
@@ -85,7 +90,14 @@ export default function Cards() {
     );
   } else {
     if (selectedCards.length === 12) {
-      return <div>You win!</div>;
+      return (
+        <div className="winScreen">
+          <div className="gameWon">You won!</div>
+          <button className="restartButton" onClick={handlePlayAgain}>
+            Play again?
+          </button>
+        </div>
+      );
     } else if (!checkForDuplicates(selectedCards)) {
       return (
         <div className="contentPlaying">
@@ -95,7 +107,7 @@ export default function Cards() {
             </span>
             <div className="gameTitlePlaying">
               <p>Memory Game</p>
-              <p>Movie Posters Edition</p>
+              <p>Film Posters Edition</p>
             </div>
             <span>
               Current Score <p className="score">{currentScore}</p>
@@ -105,9 +117,16 @@ export default function Cards() {
         </div>
       );
     } else {
-      setSelectedCards([]);
-      setCurrentScore(0);
-      return <div>Game Ovah!</div>;
+      // setSelectedCards([]);
+      // setCurrentScore(0);
+      return (
+        <div className="loseScreen">
+          <div className="gameLost">You lost!</div>
+          <button className="restartButton" onClick={handlePlayAgain}>
+            Play again?
+          </button>
+        </div>
+      );
     }
   }
 }
