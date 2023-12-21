@@ -1,4 +1,4 @@
-# Memory Card Game
+# Memory Game: Film Posters Edition
 
 [Live Demo](https://johnnynava.github.io/memory-card/)
 
