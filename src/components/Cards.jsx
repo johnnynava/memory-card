@@ -21,14 +21,16 @@ const checkForDuplicates = (array) => {
   return new Set(array).size !== array.length;
 };
 
-//restart game use useState for isNewGame?
-const handlePlayAgain = () => {};
-
 export default function Cards() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedCards, setSelectedCards] = useState([]);
   const [currentScore, setCurrentScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
+
+  const handlePlayAgain = () => {
+    setSelectedCards([]);
+    setCurrentScore(0);
+  };
 
   function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -103,22 +105,20 @@ export default function Cards() {
         <div className="contentPlaying">
           <div className="scores">
             <span>
-              High Score <p className="score">{highScore}</p>
+              Current Score <p className="score">{currentScore}</p>
             </span>
             <div className="gameTitlePlaying">
               <p>Memory Game</p>
               <p>Film Posters Edition</p>
             </div>
             <span>
-              Current Score <p className="score">{currentScore}</p>
+              High Score <p className="score">{highScore}</p>
             </span>
           </div>
           <div className="cards">{fetchedCardsArray}</div>;
         </div>
       );
     } else {
-      // setSelectedCards([]);
-      // setCurrentScore(0);
       return (
         <div className="loseScreen">
           <div className="gameLost">You lost!</div>

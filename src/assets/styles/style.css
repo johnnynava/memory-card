@@ -209,9 +209,134 @@ margin-bottom: 30px;
   padding: 0px;
   box-sizing: border-box;
   border-radius: 15px;
+  /* animation: cardShuffle 1s; */
 }
+
+/* @keyframes cardShuffle {
+  from{
+    content: url("../img/card-back.png");
+    transform: rotateY(180deg);
+  }
+  to{
+  }
+} */
 
 .card:hover {
   cursor: pointer;
   border: 3px solid green;
+}
+
+@media (max-width: 767px){
+  #root {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px
+  }
+
+  .contentPlayScreen{
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0px;
+  }
+
+  .gameTitle > p:nth-child(1){
+    font-size: 2rem;
+    margin-bottom: 0px;
+  
+  }
+  
+  .gameTitle > p:nth-child(2){
+    font-size: 1.2rem;
+    margin-top: 0px;
+  }
+
+  .contentPlaying {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+  }
+  
+  .scores {
+    font-size: 1.5rem;
+    display: grid;
+    align-self: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+    "gameTitle gameTitle"
+    "currentScore highScore";
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .gameTitlePlaying{
+    grid-area: gameTitle;
+    justify-self: center;
+  }
+
+  .gameTitlePlaying > p:nth-child(1){
+    font-size: 2rem;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  
+  .gameTitlePlaying > p:nth-child(2){
+    font-size: 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .scores > span:nth-child(1){
+    grid-area: currentScore;
+  }
+  
+  .scores > span:nth-child(3){
+    grid-area: highScore;
+  }
+
+  .scores > span {
+    font-size: 1rem;
+  }
+  
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6,1fr);
+    gap: 3vh;
+    padding: 10px;
+  }
+  
+  .card {
+    width: 150px;
+    height: 225px;
+  }
+
+  .loseScreen,
+  .winScreen{
+    padding: 30px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .gameLost,
+  .gameWon{
+    padding: 20px;
+    font-size: 3.5rem
+  }
+
+  .restartButton{
+    font-size: 2rem;
+    background-color: black;
+    padding:  10px 30px;
+  }
+
+  .footer {
+    font-size: 1rem;
+    }
+
 }

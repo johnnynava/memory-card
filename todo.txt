@@ -1,10 +1,6 @@
-problems:
-//create restart button that restarts game from zero (keep highScore and reset currentScore too)
+//do later maybe:
 
-//after everything functions:
-//make it look pretty on mobile
-//make effect of the cards to transition to back image and then display the new values
-
+//make effect of the cards to transition to back image and then display the new values (I did this but there's two problems: the effect doesn't look smooth on mobile and the effect only works properly on the first transition of the cards so I decided to comment out those lines)
 //implement function to display random movies instead of preselected ones? this will imply using the following: https://developer.themoviedb.org/reference/movie-latest-id
 //and also fetching the cards with a random array of numbers everytime a user clicks on restart or refreshes the page;
 //this can be done with a isNewGame boolean prop to the card to determine whether it should start a new game (and fetch new cards with a random array of numbers) or not
