@@ -56,6 +56,7 @@ export default function Cards() {
               `https://api.themoviedb.org/3/movie/${card}/images?language=en&api_key=${
                 import.meta.env.VITE_TMDB_API_KEY
               }`,
+              { mode: "cors" },
             );
             const parsedResponse = await fetchedItems.json();
             return (
