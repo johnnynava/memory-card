@@ -6,6 +6,7 @@
 //this can be done with a isNewGame boolean prop to the card to determine whether it should start a new game (and fetch new cards with a random array of numbers) or not
 //and also query for another random number in case the response is not a 200 (there are some cases in which you could hit a deleted id) - this can be verified by fetchedItems.status === 200 (response of fetch)
 //what cleanup function should i add for the fetchedCardsArray?
+//use useState for fetchedCardsArray (to make the flip of cards work)
 
 //NOTES:
 //check if there is a better way to do the useEffect function to fetch the cards
