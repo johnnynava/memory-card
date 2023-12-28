@@ -53,9 +53,7 @@ export default function Cards() {
         fetchedCardsArray = await Promise.all(
           cardsArray.map(async (card, index) => {
             const fetchedItems = await fetch(
-              `https://api.themoviedb.org/3/movie/${card}/images?language=en&api_key=${
-                import.meta.env.VITE_TMDB_API_KEY
-              }`,
+              `https://api.themoviedb.org/3/movie/${card}/images?language=en&api_key=0f799d1a5d6272d00905b33706caf83b`,
               { mode: "cors" },
             );
             const parsedResponse = await fetchedItems.json();
