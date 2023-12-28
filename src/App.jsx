@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Cards from "./components/Cards";
+import Cards from "./components/Cards/Cards";
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);

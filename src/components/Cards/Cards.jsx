@@ -62,6 +62,7 @@ export default function Cards() {
               <img
                 className="card"
                 key={index}
+                alt="cards"
                 src={
                   "https://image.tmdb.org/t/p/original/" +
                   parsedResponse.posters[0].file_path
